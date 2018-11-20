@@ -163,16 +163,66 @@ body>footer {
    Mobile Styles: 0px to 480px
    =================================
 */
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+    .horizontal a {
+        font-size: 1.5em;
+        line-height: 2.2em;
+    }
+
+    aside {
+        display: none;
+    }
+}
 
 /* =================================
    Tablet Styles: 481px and greater
    =================================
 */
-@media only screen and (min-width: 481px) {}
+@media only screen and (min-width: 481px) {
+    .mainmenu>li {
+        float: left;
+        width: 20%;
+        position: relative;
+    }
+
+    .submenu {
+        width: 20%;
+        box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+        position: absolute;
+    }
+}
 
 /* =================================
    Desktop Styles: 769px and greater
    =================================
 */
-@media only screen and (min-width: 769px) {}
+@media only screen and (min-width: 769px) {
+    .submenu {
+        background: transparent;
+        box-shadow: none;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .horizontal::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
+    .horizontal .submenuTitle {
+        display: none;
+    }
+
+    article {
+        float: left;
+        margin-right: 5%;
+        width: 55%;
+    }
+
+    aside {
+        float: left;
+        width: 40%;
+    }
+}
