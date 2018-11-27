@@ -146,12 +146,12 @@ body>footer {
 }
 
 /* Pulldown Menu Styles */
-.submenu {
+ul.submenu {
     display: none;
 }
 
-.submenuTitle:hover+.submenu,
-.submenu:hover {
+a.submenuTitle:hover+ul.submenu,
+ul.submenu:hover {
     display: block;
 }
 
@@ -164,7 +164,7 @@ body>footer {
    =================================
 */
 @media only screen and (max-width: 480px) {
-    .horizontal a {
+    nav.horizontal a {
         font-size: 1.5em;
         line-height: 2.2em;
     }
@@ -179,14 +179,14 @@ body>footer {
    =================================
 */
 @media only screen and (min-width: 481px) {
-    .mainmenu>li {
+    ul.mainmenu>li {
         float: left;
         width: 20%;
         position: relative;
     }
 
-    .submenu {
-        width: 20%;
+    ul.submenu {
+        width: 200%;
         box-shadow: rgb(51, 51, 51) 5px 5px 15px;
         position: absolute;
     }
@@ -197,7 +197,7 @@ body>footer {
    =================================
 */
 @media only screen and (min-width: 769px) {
-    .submenu {
+    ul.submenu {
         background: transparent;
         box-shadow: none;
         display: block;
@@ -205,13 +205,13 @@ body>footer {
         width: 100%;
     }
 
-    .horizontal::after {
+    nav.horizontal::after {
         clear: both;
         content: "";
         display: table;
     }
 
-    .horizontal .submenuTitle {
+    nav.horizontal a.submenuTitle {
         display: none;
     }
 
